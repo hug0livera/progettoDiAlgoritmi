@@ -1,0 +1,18 @@
+//go to es2/java/src then run the below commands
+
+  javac -d "../classes/" distance/*.java
+
+//compile the tests for the library distance:
+
+  javac -d "../classes/" -cp "../../../Resources/Java/JUnit/hamcrest-core-1.3.jar:../../../Resources/Java/JUnit/junit-4.12.jar:" test/*.java
+
+//run the tests for the library distance:
+
+  java -cp "../classes/:../../../Resources/Java/JUnit/hamcrest-core-1.3.jar:../../../Resources/Java/JUnit/junit-4.12.jar" org.junit.runner.JUnitCore test.TestEditDistance
+
+//run the test in the usageDistance package:
+  
+  javac -d "../classes/" usageDistance/*.java
+
+  java -cp "../classes/" usageDistance.MainUsageDistance ../../correctme.txt ../../dictionary.txt
+
